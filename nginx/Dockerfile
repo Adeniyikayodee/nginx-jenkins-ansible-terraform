@@ -2,7 +2,7 @@ FROM nginx
 
 RUN mkdir /etc/nginx/private /etc/nginx/certs
 
-COPY static-site/index* /etc/nginx/html
+COPY static-site/index* /etc/nginx/html/
 COPY static-site/nginx.conf /etc/nginx/
 
 RUN openssl req -x509 -nodes -days 365 \
